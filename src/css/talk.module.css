@@ -1,0 +1,157 @@
+/* BasicExample.module.css */
+.container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: grey;
+    margin-bottom: 1rem;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+   
+  }
+  
+  
+  .icons {
+    margin-bottom: 1rem;
+    color:red;
+  }
+  
+  .icon {
+    margin: 0 10px;
+    color: red;
+    transition: color 0.2s;
+   
+  }
+
+  .contactButton{
+    padding:12px;
+    width:160px;
+    /* background-color:orangered; */
+    color:rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 15px;
+    /* border:2px solid orangered; */
+    align-items: centre;;
+    border-radius: 10px;
+    animation: fadeIn 3s ease-in-out 0s forwards;
+  }
+  
+  .contactButton:hover{
+    padding:12px;
+    width:160px;
+    background-color: orangered;
+    color:white;
+    font-size: 15px;
+    border:2px solid orangered;
+    border-radius: 10px;
+  }
+ 
+  
+  
+  .icon:hover {
+   
+    transform: scale(1.2); 
+  }
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 26rem; /* Increased width */
+    height: 45rem; /* Increased height */
+    margin: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  .card1 {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 470px;
+   
+    height: 4rem; /* Increased height */
+    margin: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  
+  .cardImage{
+    width:480px;
+    height:500px;
+    object-fit: cover; 
+
+  }
+
+  .cardImage1{
+    width:480px;
+    height:500px;
+    object-fit: cover; 
+  }
+  
+  .cardBody {
+    padding: 1rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+    color: black;
+    font-weight: bold;;
+  
+  }
+  
+  .card:hover  {
+    color:orangered;
+  }
+  
+  .cardText {
+    font-size: 1rem;
+    color: #555;
+    
+  }
+  .cardTextlast{
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #555;
+  }
+  .cardButton {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cardButton:hover {
+    background-color: #0056b3;
+  }
+  

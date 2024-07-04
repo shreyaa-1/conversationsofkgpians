@@ -1,0 +1,161 @@
+/* home.module.css */
+*{
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+padding-left:80px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  order: 1; 
+}
+
+
+
+.left{
+ padding-right :60px;
+
+  
+}
+
+
+
+.typingCursor {
+  display: inline-block;
+  background-color: rgb(88, 83, 83);
+  width: 2px;
+  height: 1em;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+.h1main {
+
+  background: linear-gradient(100deg, #fd1d1d 0%, #e6fc45 42%, #3972cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:2.7rem;
+  margin-right:40px;
+  font-weight: 600;
+  
+}
+
+/* .right{
+  padding-left:1px;
+} */
+
+.logoImage {
+  height: 300px;
+  width: 365px;
+  padding: 18px;
+  animation: moveDown 0.5s ease-in-out forwards;
+   
+}
+
+
+
+.logoImage2 {
+  height: 300px;
+  width: 365px;
+  padding: 18px;
+  animation: moveUp 0.5s ease-in-out forwards;
+ 
+}
+
+@keyframes moveUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -20px, 0); /* Increased value */
+  }
+}
+
+@keyframes moveDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 20px, 0); /* Increased value */
+  }
+}
+
+.headd{
+  padding:5px;
+  color:rgb(96, 94, 94);
+  animation: fadeIn 2s ease-in-out 0s forwards;
+}
+.leftheadd{
+ /* color: var(--neutral-800); */
+ color:black;
+ margin-top: 0;
+ margin-bottom: 14px;
+ font-size: 25px;
+ font-weight: 700;
+ line-height: 1.25em;
+ animation: fadeIn 1s ease-in-out 0s forwards;
+}
+
+.contactButton{
+  padding:18px;
+  width:200px;
+  background-color: orangered;
+  color:rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 18px;
+  border:2px solid orangered;
+  border-radius: 10px;
+  animation: fadeIn 3s ease-in-out 0s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.contactButton:hover{
+  padding:18px;
+  width:200px;
+  background-color: #4caf50;;
+  color:white;
+  font-size: 18px;
+  border:2px solid #4caf50;;
+  border-radius: 10px;
+}
+
+
+.images {
+  flex: 1;
+  padding: 20px;
+  background-color: #e0e0e0;
+  order: 2; /* Initially, this comes second in source order */
+}
+
+.images img {
+  max-width: 100%; /* Ensures images don't exceed their container width */
+
+}
+
+.h2title{
+  color:rgb(114, 134, 245);
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .content,
+  .images {
+    flex: auto; /* Take full width of the container */
+    order: initial; /* Reset the order to default */
+  }
+}
