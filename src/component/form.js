@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import styles from '../css/form.module.css'; // Adjust path as per your project structure
 
 function App() {
-    const [firstName, setFirstName] = useState('');
+    const [name, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [contact, setContact] = useState('');
-    const [linkedin, setLinkedin] = useState('');
+    const [linkedin_url, setLinkedin] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const formData = {
-            firstName,
+            name,
             email,
             contact,
-            linkedin
+            linkedin_url
         };
 
         try {
-            const response = await fetch('http://localhost:5001/subscribe', {
+            const response = await fetch('http://localhost:5000/form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ function App() {
                         type="text"
                         id="firstname"
                         className={styles.input}
-                        value={firstName}
+                        value={name}
                         onChange={(e) => setFirstName(e.target.value)}
                         placeholder="Enter Name"
                         required
@@ -98,7 +98,7 @@ function App() {
                         type="text"
                         id="linkedin"
                         className={styles.input}
-                        value={linkedin}
+                        value={linkedin_url}
                         onChange={(e) => setLinkedin(e.target.value)}
                         placeholder="Enter LinkedIn ID"
                         required

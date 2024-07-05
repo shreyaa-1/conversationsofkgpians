@@ -9,7 +9,7 @@ function SubscriptionForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const url = 'http://localhost:5001/subscribe';
+    const url = 'http://localhost:5000/subscription';
 
     fetch(url, {
       method: 'POST',
