@@ -1,102 +1,124 @@
 /* globalStyles.css */
 
 ul {
-    list-style: none;
-  }
-  
-  body {
-    color: rgb(82, 66, 66);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.667em;
-  }
-  
-  a {
-    text-decoration: none;
-    color: rgb(89, 87, 87);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.667em;
+  list-style: none;
+}
+
+body {
+  color: rgb(82, 66, 66);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.667em;
+}
+
+.navMenu li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(89, 87, 87);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.667em;
+}
+
+a:hover {
+  color: orangered;
+}
+
+.navbar {
+  padding: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  min-height: 70px;
+}
+
+/* Adjust margin-left for the logo */
+.logoImage {
+  margin-left: 130px; /* Adjust this value as needed */
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+/* navMenu */
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 780px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 
-  a:hover{
-    color:orangered;
+  .bar {
+    background-color: #120f0b;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 5px;
+    transition: 0.3s ease-in-out;
   }
-  
-  .navbar {
-    padding: 0px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0px;
-    min-height: 70px;
-  }
-  
-  /* Adjust margin-left for the logo */
-  .logoImage {
-    margin-left: 130px; /* Adjust this value as needed */
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
 
+  /* Hamburger animation */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
-  
-  /* navMenu */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Dropdown menu */
   .navMenu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+    position: absolute;
+    flex-direction: column;
+    gap: 0;
+    color: #120f0b;
+
+    top: 70px;
+    left: -100%;
+    text-align: start;
+    width: 100%;
+    transition: 0.7s ease-in-out;
+    background-color: transparent; /* Set background to transparent */
+    padding: 10px;
+    z-index: 9999; /* Ensure it appears above other content */
   }
-  
-  /* Media queries for responsive design */
-  @media screen and (max-width: 780px) {
-    .hamburger {
-      display: block;
-      cursor: pointer;
-    }
-  
-    .bar {
-      background-color: #120f0b;
-      width: 20px;
-      height: 3px;
-      display: block;
-      margin: 5px;
-      transition: 0.3s ease-in-out;
-    }
-  
-    /* Hamburger animation */
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-  
-    /* Dropdown menu */
-    .navMenu {
-      position: absolute;
-      flex-direction: column;
-      gap: 0;
-      top: 70px;
-      left: -100%;
-      text-align: start;
-      width: 100%;
-      transition: 0.7s ease-in-out;
-      background-color: aliceblue;
-      padding: 10px;
-    }
-  
-    .navMenu.active {
-      left: 0;
-    }
-  
-    .navMenu li {
-      margin: 16px 0;
-    }
+
+  .navMenu.active {
+    left: 0;
+    background-color: rgb(252, 207, 191); /* Background color only when active */
   }
-  
+
+  .navMenu li {
+    margin: 16px 0;
+  }
+
+  /* Full-screen overlay when navMenu is active */
+  .navOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9998; /* Place it below the navMenu */
+  }
+
+  .navOverlay.active {
+    display: block;
+  }
+}

@@ -9,7 +9,7 @@ function SubscriptionForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const url = 'http://localhost:5000/subscription';
+    const url = 'https://kgp-convo-backend.vercel.app/subscription';
 
     fetch(url, {
       method: 'POST',
@@ -34,7 +34,7 @@ function SubscriptionForm() {
   return (
     <div className={styles.container} id="subscribe">
       <h1 className={styles.title}>Subscribe to our News letter.</h1>
-     <p className={styles.subtitle}>Discover captivating insights and be a part of our exciting community!</p> 
+     <p className={styles.subtitle}>Discover captivating insights from IIT Kharagpur Alumni in various fields!</p> 
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           type="email"
@@ -50,7 +50,7 @@ function SubscriptionForm() {
       )}
       <p className={styles.footerText}>
         Be a part of our ever-growing community. 
-        <a href="https://www.linkedin.com/company/conversations-of-kgpians/posts/?feedView=all" className={styles.link}>Follow us on LikedIn</a>
+        <a href="https://www.linkedin.com/company/conversations-of-kgpians/posts/?feedView=all" className={styles.link}>Follow us on LinkedIn</a>
       </p>
     </div>
   );

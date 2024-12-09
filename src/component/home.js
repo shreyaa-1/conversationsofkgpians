@@ -23,7 +23,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSet((prevSet) => (prevSet + 1) % imageSets.length);
-    }, 5000); // Change image set every 3 seconds
+    }, 3000); // Change image set every 3 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -31,8 +31,9 @@ function Home() {
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.leftheadd}>
+        
           <Typing
-            text={['Conversations of Kgpians']}
+            text={['Conversations of KGPians']}
             speed={40}
             eraseSpeed={0}
             typingDelay={500}
@@ -43,15 +44,16 @@ function Home() {
           <h2 className={styles.h2title}>To Global Forums.</h2>
         </div>
         <p className={styles.headd}>
-        Welcome to Conversations of KGPians, an IIT Kharagpur College Society website!
+        Welcome to Conversations of KGPians, an IIT Kharagpur College Society!
 <br/> 
 
- In this dynamic space, we celebrate the triumphs, challenges, and lessons <br/> learned  by our alumni and peers. Through their experiences and wisdom,
- we aim <br/> to  guideand inspire the next generation of leaders, innovators,
- and changemakers <br/>coming   from IIT Kharagpur.<br/>
+ In this dynamic space, we celebrate the triumphs, challenges, and lessons <br/> learned  by our alumni. Through their experiences and wisdom,
+ we aim <br/> to  guide and inspire the next generation of leaders, innovators,
+ and <br/> changemakerscoming   from IIT Kharagpur.<br/>
         </p>
+        <p> &nbsp; &nbsp; If you are an alumni, please connect to us-:</p>
         <Link to="/form">
-    <button className={styles.contactButton}>Contact Us</button>
+    <button className={styles.contactButton}>Connect with us</button>
   </Link>
       </div>
       <div className={styles.right}>

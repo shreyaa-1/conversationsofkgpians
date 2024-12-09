@@ -11,6 +11,8 @@ import partha from '../talkimages/partha.jpg';
 import ramayanan from '../talkimages/ramayanan.jpg';
 import samarth from '../talkimages/samarth.jpg';
 import sudipta from '../talkimages/sudipta.jpg';
+import manish from '../talkimages/manish.jpg';
+
 
 
 function Talk() {
@@ -63,14 +65,30 @@ function Talk() {
           </p>
         </div>
         <div className={styles.cardContainer}>
+        <div className={styles.card}>
+            <img className={styles.cardImage} src={manish} alt="Card" />
+            <div className={styles.cardBody}>
+              <div className={styles.cardTitle}>Manish Kumar</div>
+              <div className={styles.cardText}> Global Strategy Head at Siemens Energy
+ 
+              </div>
+              <div className={styles.cardText}>Adjunct Professor at University of North Carolina
+              </div>
+              <div className={styles.cardText}>Harvard MBA
+              </div>
+              {/* <div className={styles.cardTextlast}>Patel Hall</div> */}
+            <a href="https://www.youtube.com/watch?v=I54FQcXRj4I&t=2537s">  <FaYoutube size={45} className={styles.icon} /></a>
+             
+            </div>
+          </div>
           <div className={styles.card}>
             <img className={styles.cardImage} src={ramayanan} alt="Card" />
             <div className={styles.cardBody}>
-              <div className={styles.cardTitle}>Dr V Ramayanan</div>
+              <div className={styles.cardTitle}>Dr V Narayanan</div>
               <div className={styles.cardText}> Director of ISRO (LPSC)
               </div>
               <div className={styles.cardText}>Worked on Chandrayaan 2 and Chandrayaan 3 </div>
-             <br/>
+             
               {/* <div className={styles.cardTextlast}>Patel Hall</div> */}
              <a href="https://youtu.be/B-CLKgaeCS0?si=pZvG9ar1ufrmbT8p"> <FaYoutube size={45} className={styles.icon} /></a>
 
@@ -107,7 +125,7 @@ function Talk() {
               <div className={styles.cardTitle}>Sudipta Biswas</div>
               <div className={styles.cardText}> Co-founder of Floworks (Y Combinator accelerated)
               </div>
-              <div className={styles.cardText}>Risk Analyst at Goldmann Sachs (Former)
+              <div className={styles.cardText}>Risk Analyst at Goldman Sachs (Former)
               </div>
               <div className={styles.cardText}>Silver Medalist at IIT Kharagpur
               </div>

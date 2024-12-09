@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "conversationsofkgpians-7e80d"
-  }
+    "default": "conversationsofkgpiansbackend",
+    "production": "conversationsofkgpians-7e80d"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -19,7 +19,7 @@ function App() {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/form', {
+            const response = await fetch('https://kgp-convo-backend.vercel.app/form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

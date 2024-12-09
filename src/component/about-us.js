@@ -12,10 +12,8 @@ function BasicExample() {
         <br/><br/>
         <div className={styles.container}>
           <h1 className={styles.title}>About Us</h1>
-          <p className={styles.subtitle}>Welcome to Conversations of KGPians, an IIT Kharagpur College Society website!
-
-Our platform shines a spotlight on the journeys of IIT Kharagpur alumni. Here, you'll discover their remarkable achievements and gain valuable insights and advice for aspiring leaders, inventors, and creators.
-Dive into a treasure trove of career guidance, entrepreneurial tips, and inspiring narratives designed to empower you to achieve your goals. Whether you're looking for practical advice or a dose of motivation, our community is here to support and inspire you every step of the way.
+          <p className={styles.subtitle}>
+          Our platform highlights the extraordinary journeys of IIT Kharagpur alumni, showcasing their remarkable achievements and providing valuable insights for aspiring leaders, inventors, and creators. We host insightful online and offline sessions with KGPians on a range of topics, fostering knowledge exchange and inspiration. Additionally, our newsletter addresses global issues across various domains, ensuring our community stays informed and engaged.
 </p>
         </div>
         <br/>

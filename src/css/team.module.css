@@ -2,6 +2,7 @@
 .container {
   text-align: center;
   margin-bottom: 2rem;
+  
 }
 
 .title {
@@ -68,8 +69,9 @@
 .cardImage {
   width: 100%; /* Ensures the image takes the full width of the container */
   height: 340px; /* Maintains the aspect ratio of the image */
-  object-fit: cover; /* Ensures the image covers the container, cropping if necessary */
-  border-radius: 8px; /* Optional: Add rounded corners */
+  object-fit: contain; /* Ensures the image covers the container, cropping if necessary */
+  border-radius: 8px; 
+ 
 }
 
 
@@ -115,4 +117,40 @@
 
 .cardButton:hover {
   background-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Smaller width for tablets */
+    height: 140px;
+    display:flex;
+    flex-direction:row;
+    
+  }
+
+  .cardText {
+    font-size: 15px;
+  }
+
+  .cardTextlast {
+    font-size: 40px;
+  }
+
+  .cardImage {
+    width: 150px;
+    height: 140px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+    display: block; /* Ensure it defaults to block */
+  }
+
+  .cardTitle,
+  .cardImage {
+    display: flex; /* Set both cardTitle and cardImage to flex */
+    align-items: center; /* Center align items */
+  }
+ 
 }
